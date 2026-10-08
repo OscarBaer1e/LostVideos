@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ma vidéo</title>
+  <style>
+    :root {
+      --fond: #f2efe9;
+      --texte: #1d2330;
+      --discret: #5d6575;
+      --accent: #2f5d8a;
+      --ecran: #12161f;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --fond: #161a22;
+        --texte: #e9e6df;
+        --discret: #9aa2b1;
+        --accent: #7fb0e0;
+        --ecran: #0a0c11;
+      }
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--fond);
+      color: var(--texte);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2.5rem 1.25rem;
+      background-image: url(https://thumbs.dreamstime.com/b/une-autre-nuit-sombre-et-triste-lune-au-dessus-des-arbres-dans-le-ciel-de-avec-silhouettes-branches-focalisation-s%C3%A9lective-photo-274140460.jpg);
+        background-size: cover;
+        color: rgb(177, 0, 0);
+    }
+
+    header, main, footer {
+      width: 100%;
+      max-width: 860px;
+    }
+
+    h1 {
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      line-height: 1.15;
+      margin: 0 0 0.5rem;
+      font-weight: 700;
+    }
+
+    .intro {
+      color: var(--discret);
+      margin: 0 0 2rem;
+      max-width: 60ch;
+    }
+
+    .lecteur {
+      background: var(--ecran);
+      border-radius: 6px;
+      overflow: hidden;
+      aspect-ratio: 16 / 9;
+    }
+
+    .lecteur video,
+    .lecteur iframe {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border: 0;
+    }
+
+    .description {
+      margin-top: 1.75rem;
+      max-width: 62ch;
+    }
+
+    .description h2 {
+      font-size: 1.25rem;
+      margin: 0 0 0.4rem;
+    }
+
+    .description p { margin: 0; }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: var(--discret);
+    }
+
+    a { color: var(--accent); }
+    :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>VIdéo de le Dylan et le Oscar</h1>
+    <p class="intro">Complecetifei ka chose</p>
+  </header>
+
+  <main>
+    <div class="lecteur">
+      <video controls preload="metadata" poster="">
+        <source src="./Ressources/Videos/Kaaris - Zoo.mp4" type="video/mp4">
+        Votre navigateur ne peut pas lire cette vidéo.
+      </video>
+    </div>
+    <section class="description">
+      <h2>À propos de cette vidéo</h2>
+      <p>Pour le peuple</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 – C'est les ténèbres</p>
+  </footer>
+
+</body>
+</html>
